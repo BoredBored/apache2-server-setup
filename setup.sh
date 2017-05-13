@@ -40,3 +40,7 @@ apt-get install iptables
 /sbin/iptables -N port-scanning
 /sbin/iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN
 /sbin/iptables -A port-scanning -j DROP
+echo "Please run the following:"
+echo "#/sbin/iptables -t raw -A PREROUTING -p tcp -m tcp --syn -j CT --notrack"
+echo "#/sbin/iptables -A INPUT -p tcp -m tcp -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460"
+echo "#/sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP"
