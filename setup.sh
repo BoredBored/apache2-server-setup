@@ -56,3 +56,5 @@ echo "     certbot renew --dry-run                 (sets up certificate auto ren
 echo "     composer require defuse/php-encryption"
 echo "     composer require respect/validation"
 rm -R "/stuff"
+apt-get upgrade
+apt-get update
