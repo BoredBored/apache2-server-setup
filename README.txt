@@ -1,10 +1,10 @@
 Run this to start setup process:
 
-`apt-get install software-properties-common python-software-properties -y;add-apt-repository ppa:git-core/ppa -y; apt-get update; apt-get install git -y;cd ..;git clone https://github.com/BoredBored/stuff.git;cd stuff;chmod +x *; sh setup.sh`
+apt-get install software-properties-common python-software-properties -y;add-apt-repository ppa:git-core/ppa -y; apt-get update; apt-get install git -y;cd ..;git clone https://github.com/BoredBored/stuff.git;cd stuff;chmod +x *; sh setup.sh
 
 Put this in /etc/apache2/sites-available
 
-`<VirtualHost *:80>
+<VirtualHost *:80>
     ServerAdmin aangeletakis@gmail.com
     ServerName admin.angeletakis.net
     DocumentRoot /var/www/admin
@@ -69,4 +69,4 @@ Put this in /etc/apache2/sites-available
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-`
+
