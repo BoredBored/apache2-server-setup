@@ -2,6 +2,7 @@
 #apt-get install software-properties-common python-software-properties -y;add-apt-repository ppa:git-core/ppa -y; apt-get update; apt-get install git -y;cd ..;git clone https://github.com/BoredBored/stuff.git;cd stuff;chmod +x *; sh setup.sh
 rm -R "/var/www/html"
 mkdir "/var/www/admin"
+mkdir "/var/www/admin/domains"
 mv "mkdo.sh" "/var/www/admin/mkdo.sh"
 mv "mksubdo.sh" "/var/www/admin/mksubdo.sh"
 cd
