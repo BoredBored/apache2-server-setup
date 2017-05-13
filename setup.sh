@@ -5,6 +5,7 @@ apt-get update
 apt-get install git
 apt-get update
 apt-get install curl php7.0-cli git
+apt-get update
 add-apt-repository ppa:certbot/certbot
 apt-get update
 apt-get install python-certbot-apache
@@ -44,6 +45,9 @@ apt-get install iptables
 /sbin/iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN
 /sbin/iptables -A port-scanning -j DROP
 echo "Please run the following:"
-echo "#/sbin/iptables -t raw -A PREROUTING -p tcp -m tcp --syn -j CT --notrack"
-echo "#/sbin/iptables -A INPUT -p tcp -m tcp -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460"
-echo "#/sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP"
+echo "     #/sbin/iptables -t raw -A PREROUTING -p tcp -m tcp --syn -j CT --notrack"
+echo "     #/sbin/iptables -A INPUT -p tcp -m tcp -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460"
+echo "     #/sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP"
+echo "Then, when you're ready, do:"
+echo "     certbot --apache certonly   (sets up https)"
+echo "     certbot renew --dry-run     (sets up certificate auto renewal)"
