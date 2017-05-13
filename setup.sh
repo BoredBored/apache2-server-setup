@@ -6,19 +6,16 @@ mv "mkSubDo.sh" "var/www/admin/mkSubDo.sh"
 rmdir "/stuff"
 cd "../var/www/admin"
 apt-get install software-properties-common python-software-properties -y
-#add-apt-repository ppa:git-core/ppa
-#apt-get update
-#apt-get install git -y
+add-apt-repository ppa:git-core/ppa
+apt-get update
+apt-get install git -y
 apt-get update
 apt-get install curl php7.0-cli git -y
 apt-get update
-add-apt-repository ppa:certbot/certbot
+add-apt-repository ppa:certbot/certbot -y
 apt-get update
 apt-get install python-certbot-apache -y
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-
-composer require defuse/php-encryption
-composer require respect/validation
 apt-get install iptables -y
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
 /sbin/iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP
