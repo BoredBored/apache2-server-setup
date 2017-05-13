@@ -1,5 +1,4 @@
 #!/bin/bash
-cd "sub"
 subDomain=$1
 mkdir -p "$subDomain/main/public-html"
 echo "created $subDomain/main/public-html in /sub/"
