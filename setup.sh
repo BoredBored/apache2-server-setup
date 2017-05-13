@@ -1,6 +1,6 @@
 #!/bin/bash
 rm -R "/var/www/html"
-mkdir "var/www/admin"
+mkdir "/var/www/admin"
 mv "mkDo.sh" "/var/www/admin/mkDo.sh"
 mv "mkSubDo.sh" "var/www/admin/mkSubDo.sh"
 rmdir "/stuff"
