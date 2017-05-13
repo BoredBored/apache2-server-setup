@@ -1,4 +1,5 @@
 #!/bin/bash
+#add-apt-repository ppa:git-core/ppa -y; apt-get update; apt-get install git -y;cd ..;git clone https://github.com/BoredBored/stuff.git;cd stuff;chmod +x *; sh setup.sh
 rm -R "/var/www/html"
 mkdir "/var/www/admin"
 mv "mkDo.sh" "/var/www/admin/mkDo.sh"
@@ -6,9 +7,6 @@ mv "mkSubDo.sh" "var/www/admin/mkSubDo.sh"
 rmdir "/stuff"
 cd "../var/www/admin"
 apt-get install software-properties-common python-software-properties -y
-add-apt-repository ppa:git-core/ppa -y
-apt-get update
-apt-get install git -y
 apt-get update
 apt-get install curl php7.0-cli git -y
 apt-get update
