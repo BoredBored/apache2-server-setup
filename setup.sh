@@ -1,4 +1,7 @@
 #!/bin/bash
+rm -R "/var/www/html"
+mkdir "var/www/admin"
+cd "../var/www/admin"
 apt-get install software-properties-common python-software-properties -y
 add-apt-repository ppa:git-core/ppa
 apt-get update
@@ -10,6 +13,7 @@ add-apt-repository ppa:certbot/certbot
 apt-get update
 apt-get install python-certbot-apache -y
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
 composer require defuse/php-encryption
 composer require respect/validation
 apt-get install iptables -y
@@ -48,7 +52,7 @@ apt-get install iptables -y
 rm -R "/var/www/html"
 mkdir "var/www/admin"
 mv "mkDo.sh" "/var/www/admin"
-mv "mkSubDo.sh" "var/www/admin"
+mv "mkSubDo.sh" "var/www/admin/"
 rmDir "/stuff"
 echo "Please run the following:"
 echo "     #/sbin/iptables -t raw -A PREROUTING -p tcp -m tcp --syn -j CT --notrack"
