@@ -6,7 +6,7 @@ mv "mkSubDo.sh" "var/www/admin/mkSubDo.sh"
 rmdir "/stuff"
 cd "../var/www/admin"
 apt-get install software-properties-common python-software-properties -y
-add-apt-repository ppa:git-core/ppa
+add-apt-repository ppa:git-core/ppa -y
 apt-get update
 apt-get install git -y
 apt-get update
