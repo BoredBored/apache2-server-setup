@@ -2,6 +2,9 @@
 rm -R "/var/www/html"
 mkdir "var/www/admin"
 cd "../var/www/admin"
+mv "mkDo.sh" "/var/www/admin/mkDo.sh"
+mv "mkSubDo.sh" "var/www/admin/mkSubDo.sh"
+rmDir "/stuff"
 apt-get install software-properties-common python-software-properties -y
 add-apt-repository ppa:git-core/ppa
 apt-get update
@@ -49,11 +52,6 @@ apt-get install iptables -y
 /sbin/iptables -N port-scanning
 /sbin/iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN
 /sbin/iptables -A port-scanning -j DROP
-rm -R "/var/www/html"
-mkdir "var/www/admin"
-mv "mkDo.sh" "/var/www/admin"
-mv "mkSubDo.sh" "var/www/admin/"
-rmDir "/stuff"
 echo "Please run the following:"
 echo "     #/sbin/iptables -t raw -A PREROUTING -p tcp -m tcp --syn -j CT --notrack"
 echo "     #/sbin/iptables -A INPUT -p tcp -m tcp -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460"
