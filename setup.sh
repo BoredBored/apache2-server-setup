@@ -6,9 +6,9 @@ mv "mkDo.sh" "/var/www/admin/mkDo.sh"
 mv "mkSubDo.sh" "var/www/admin/mkSubDo.sh"
 rmdir "/stuff"
 apt-get install software-properties-common python-software-properties -y
-add-apt-repository ppa:git-core/ppa
-apt-get update
-apt-get install git -y
+#add-apt-repository ppa:git-core/ppa
+#apt-get update
+#apt-get install git -y
 apt-get update
 apt-get install curl php7.0-cli git -y
 apt-get update
