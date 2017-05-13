@@ -6,5 +6,6 @@ mkdir -p "$subDomain/rootDomain/mobile/public-html"
 echo "created $subDomain/rootDomain/mobile/public-html in /sub/"
 mkdir -p "$domainName/sub"
 echo "created $subDomain/sub in /sub/"
-
+cp "/var/www/admin/mksubdo.sh" "$domainName/sub"
+echo "cp /var/www/admin/mksubdo.sh $domainName/sub"
 echo "Done. :)"
