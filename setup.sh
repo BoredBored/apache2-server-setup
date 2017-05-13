@@ -1,14 +1,14 @@
 #!/bin/bash
-apt-get install software-properties-common python-software-properties
+apt-get install software-properties-common python-software-properties -y
 add-apt-repository ppa:git-core/ppa
 apt-get update
-apt-get install git
+apt-get install git -y
 apt-get update
-apt-get install curl php7.0-cli git
+apt-get install curl php7.0-cli git -y
 apt-get update
 add-apt-repository ppa:certbot/certbot
 apt-get update
-apt-get install python-certbot-apache
+apt-get install python-certbot-apache -y
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 composer require defuse/php-encryption
 apt-get install iptables
