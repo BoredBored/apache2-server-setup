@@ -4,7 +4,7 @@ mkdir "var/www/admin"
 cd "../var/www/admin"
 mv "mkDo.sh" "/var/www/admin/mkDo.sh"
 mv "mkSubDo.sh" "var/www/admin/mkSubDo.sh"
-rmDir "/stuff"
+rmdir "/stuff"
 apt-get install software-properties-common python-software-properties -y
 add-apt-repository ppa:git-core/ppa
 apt-get update
