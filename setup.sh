@@ -12,6 +12,7 @@ apt-get update
 add-apt-repository ppa:certbot/certbot -y
 apt-get update
 apt-get install python-certbot-apache -y
+apt-get install vim -y
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 apt-get install iptables -y
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
