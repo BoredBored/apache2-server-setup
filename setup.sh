@@ -55,6 +55,6 @@ echo "     certbot --apache certonly               (sets up https)"
 echo "     certbot renew --dry-run                 (sets up certificate auto renewal)"
 echo "     composer require defuse/php-encryption"
 echo "     composer require respect/validation"
-rm -R "/stuff"
 apt-get upgrade
 apt-get update
+rm -R "/stuff"
