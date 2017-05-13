@@ -60,3 +60,4 @@ echo "     composer require respect/validation"
 apt-get upgrade
 apt-get update
 rm -R "/stuff"
+echo "Done. :)"
