@@ -1,10 +1,10 @@
 #!/bin/bash
 rm -R "/var/www/html"
 mkdir "var/www/admin"
-cd "../var/www/admin"
 mv "mkDo.sh" "/var/www/admin/mkDo.sh"
 mv "mkSubDo.sh" "var/www/admin/mkSubDo.sh"
 rmdir "/stuff"
+cd "../var/www/admin"
 apt-get install software-properties-common python-software-properties -y
 #add-apt-repository ppa:git-core/ppa
 #apt-get update
