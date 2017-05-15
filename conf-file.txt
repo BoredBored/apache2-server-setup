@@ -29,13 +29,6 @@
         #Include conf-available/serve-cgi-bin.conf
 </VirtualHost>
 <VirtualHost *:80>
-    ServerName "admin.angeletakis.net"
-    ServerAdmin "aangeletakis@gmail.com"
-    DocumentRoot "/var/www/admin"
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-<VirtualHost *:80>
     ServerName "angeletakis.net"
     ServerAdmin "aangeletakis@gmail.com"
     ServerAlias "www.angeletakis.net"
