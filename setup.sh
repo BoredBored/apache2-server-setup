@@ -24,18 +24,6 @@ mkdir "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/main/p
 mv "mkdo.sh" "/var/www/admin/mkdo.sh"
 mv "mksubdo.sh" "/var/www/admin/mksubdo.sh"
 
-a2dissite "000-default"
-service apache2 reload
-
-cat "conf-file.txt" > "/etc/apache2/sites-available/000-default.conf"
-
-a2ensite "/etc/apache2/sites-available/000-default.conf"
-service apache2 reload
-
-cd
-cd "../var/www/admin"
-
-
 apt-get update
 apt-get install curl php7.0-cli git -y
 apt-get update
