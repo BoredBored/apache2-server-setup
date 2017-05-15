@@ -24,6 +24,9 @@ mkdir "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/main/p
 mv "mkdo.sh" "/var/www/admin/mkdo.sh"
 mv "mksubdo.sh" "/var/www/admin/mksubdo.sh"
 
+chown -R $USER:$USER /var/www/
+chmod -R 755 /var/www
+
 apt-get update
 apt-get install curl php7.0-cli git -y
 apt-get update
