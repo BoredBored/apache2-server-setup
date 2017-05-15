@@ -32,45 +32,21 @@
     ServerName "angeletakis.net"
     ServerAdmin "aangeletakis@gmail.com"
     ServerAlias "www.angeletakis.net"
-    DocumentRoot "/var/www/admin/domains/angeletakis.net/rootDomain/main/public-html"
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-    RewriteEngine On
-    RewriteCond %{HTTP_HOST} ^angeletakis.net [NC]
-    RewriteRule ^(.*)$ http://www.angeletakis.net/$1 [L,R=301]
-</VirtualHost>
-<VirtualHost *:80>
-    ServerAdmin aangeletakis@gmail.com
-    ServerName m.angeletakis.net
-    DocumentRoot /var/www/admin/domains/angeletakis.net/rootDomain/mobile/public-html
+    DocumentRoot "/var/www/admin/domains/angeletakis.net/rootDomain/public"
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 <VirtualHost *:80>
     ServerName "test.angeletakis.net"
     ServerAdmin "aangeletakis@gmail.com"
-    DocumentRoot "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/main/public-html"
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-<VirtualHost *:80>
-    ServerName "m.test.angeletakis.net"
-    ServerAdmin "aangeletakis@gmail.com"
-    DocumentRoot "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/mobile/public-html"
+    DocumentRoot "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/public"
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 <VirtualHost *:80>
     ServerName "alexios.angeletakis.net"
     ServerAdmin "aangeletakis@gmail.com"
-    DocumentRoot "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/main/public-html"
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
-<VirtualHost *:80>
-    ServerName "m.alexios.angeletakis.net"
-    ServerAdmin "aangeletakis@gmail.com"
-    DocumentRoot "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/mobile/public-html"
+    DocumentRoot "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/public"
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
