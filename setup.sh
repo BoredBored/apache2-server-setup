@@ -3,6 +3,24 @@
 rm -R "/var/www/html"
 mkdir "/var/www/admin"
 mkdir "/var/www/admin/domains"
+mkdir "/var/www/admin/domains/angeletakis.net"
+mkdir "/var/www/admin/domains/angeletakis.net/rootDomain"
+mkdir "/var/www/admin/domains/angeletakis.net/rootDomain/mobile"
+mkdir "/var/www/admin/domains/angeletakis.net/rootDomain/mobile/public-html"
+mkdir "/var/www/admin/domains/angeletakis.net/rootDomain/main"
+mkdir "/var/www/admin/domains/angeletakis.net/rootDomain/main/public-html"
+mkdir "/var/www/admin/domains/angeletakis.net/sub"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/mobile"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/mobile/public-html"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/main"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/main/public-html"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/mobile"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/mobile/public-html"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/main"
+mkdir "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/main/public-html"
+
 mv "mkdo.sh" "/var/www/admin/mkdo.sh"
 mv "mksubdo.sh" "/var/www/admin/mksubdo.sh"
 cd
@@ -48,10 +66,9 @@ apt-get install iptables -y
 /sbin/iptables -N port-scanning
 /sbin/iptables -A port-scanning -p tcp --tcp-flags SYN,ACK,FIN,RST RST -m limit --limit 1/s --limit-burst 2 -j RETURN
 /sbin/iptables -A port-scanning -j DROP
-echo "Please run the following:"
-echo "     #/sbin/iptables -t raw -A PREROUTING -p tcp -m tcp --syn -j CT --notrack"
-echo "     #/sbin/iptables -A INPUT -p tcp -m tcp -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460"
-echo "     #/sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP"
+/sbin/iptables -t raw -A PREROUTING -p tcp -m tcp --syn -j CT --notrack
+/sbin/iptables -A INPUT -p tcp -m tcp -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460
+/sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
 echo "Then, when you're ready, do:"
 echo "     certbot --apache certonly               (sets up https)"
 echo "     certbot renew --dry-run                 (sets up certificate auto renewal)"
@@ -59,5 +76,5 @@ echo "     composer require defuse/php-encryption"
 echo "     composer require respect/validation"
 apt-get upgrade
 apt-get update
-rm -R "/stuff"
 echo "Done. :)"
+rm -R "/stuff"
