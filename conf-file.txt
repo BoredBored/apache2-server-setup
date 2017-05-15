@@ -7,13 +7,6 @@
 </VirtualHost>
 <VirtualHost *:80>
     ServerAdmin aangeletakis@gmail.com
-    ServerName alexios.angeletakis.net
-    DocumentRoot /var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/main/public-html
-    ErrorLog /error.log
-    CustomLog /access.log combined
-</VirtualHost>
-<VirtualHost *:80>
-    ServerAdmin aangeletakis@gmail.com
     ServerName angeletakis.net
     ServerAlias www.angeletakis.net
     DocumentRoot /var/www/example.com/public_html
@@ -25,15 +18,15 @@
 </VirtualHost>
 <VirtualHost *:80>
     ServerAdmin aangeletakis@gmail.com
-    ServerName m.alexios.angeletakis.net
-    DocumentRoot /var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/mobile/public-html
-    ErrorLog /error.log
-    CustomLog /access.log combined
+    ServerName m.angeletakis.net
+    DocumentRoot /var/www/admin/domains/angeletakis.net/rootDomain/mobile/public-html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 <VirtualHost *:80>
     ServerAdmin aangeletakis@gmail.com
-    ServerName m.angeletakis.net
-    DocumentRoot /var/www/admin/domains/angeletakis.net/rootDomain/mobile/public-html
+    ServerName test.angeletakis.net
+    DocumentRoot /var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/main/public-html
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
@@ -46,10 +39,17 @@
 </VirtualHost>
 <VirtualHost *:80>
     ServerAdmin aangeletakis@gmail.com
-    ServerName test.angeletakis.net
-    DocumentRoot /var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/main/public-html
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    ServerName alexios.angeletakis.net
+    DocumentRoot /var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/main/public-html
+    ErrorLog /error.log
+    CustomLog /access.log combined
+</VirtualHost>
+<VirtualHost *:80>
+    ServerAdmin aangeletakis@gmail.com
+    ServerName m.alexios.angeletakis.net
+    DocumentRoot /var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/mobile/public-html
+    ErrorLog /error.log
+    CustomLog /access.log combined
 </VirtualHost>
 
 # vim: syntax=apache ts=4 sw=4 sts=4 sr noet
