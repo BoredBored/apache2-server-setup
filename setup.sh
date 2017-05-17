@@ -1,21 +1,5 @@
 #!/bin/bash
 #apt-get install software-properties-common python-software-properties -y;add-apt-repository ppa:git-core/ppa -y; apt-get update; apt-get install git -y;cd ..;git clone https://github.com/BoredBored/stuff.git;cd stuff;chmod +x *; sh setup.sh
-mkdir "/var/www/admin";
-mkdir "/var/www/admin/domains";
-mkdir "/var/www/admin/domains/angeletakis.net";
-mkdir "/var/www/admin/domains/angeletakis.net/rootDomain";
-mkdir "/var/www/admin/domains/angeletakis.net/rootDomain/public";
-mkdir "/var/www/admin/domains/angeletakis.net/sub";
-mkdir "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net";
-mkdir "/var/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/public";
-mkdir "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net";
-mkdir "/var/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net/public";
-
-mv "mkdo.sh" "/var/www/admin/mkdo.sh";
-mv "mksubdo.sh" "/var/www/admin/mksubdo.sh";
-
-chown -R $USER:$USER /var/www/;
-chmod -R 755 /var/www;
 
 apt-get update;
 apt-get install curl php7.0-cli git -y;
