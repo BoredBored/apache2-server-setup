@@ -14,10 +14,10 @@ mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/alexios.angeletak
 apt-get update -y;
 apt-get install curl php7.0-cli git -y;
 apt-get update -y;
-#add-apt-repository ppa:certbot/certbot -y;
-#apt-get update;
-#apt-get install python-certbot-apache -y;
-apt-get install python-certbot-apache -t jessie-backports -y;
+apt-get install software-properties-common -y;
+add-apt-repository ppa:certbot/certbot -y;
+apt-get update -y;
+apt-get install python-certbot-apache -y;
 apt-get install vim -y;
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer;
 apt-get install iptables -y;
