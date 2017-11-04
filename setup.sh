@@ -20,6 +20,7 @@ apt-get update -y;
 apt-get install python-certbot-apache -y;
 apt-get install vim -y;
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer;
+goto endOfFireWallInstallationAndSetup
 apt-get install iptables -y;
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP;
 /sbin/iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP;
@@ -56,6 +57,7 @@ apt-get install iptables -y;
 /sbin/iptables -t raw -A PREROUTING -p tcp -m tcp --syn -j CT --notrack;
 /sbin/iptables -A INPUT -p tcp -m tcp -m conntrack --ctstate INVALID,UNTRACKED -j SYNPROXY --sack-perm --timestamp --wscale 7 --mss 1460;
 /sbin/iptables -A INPUT -m conntrack --ctstate INVALID -j DROP;
+:endOfFireWallInstallationAndSetup
 echo "Then, when you're ready, do:";
 echo "     certbot --apache certonly               (sets up https)";
 echo "     certbot renew --dry-run                 (sets up certificate auto renewal)";
