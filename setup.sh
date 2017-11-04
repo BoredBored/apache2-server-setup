@@ -20,7 +20,7 @@ apt-get update -y;
 apt-get install python-certbot-apache -y;
 apt-get install vim -y;
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer;
-goto endOfFireWallInstallationAndSetup
+goto endOfFireWallInstallationAndSetup # commment out if you don't have a firewall
 apt-get install iptables -y;
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP;
 /sbin/iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP;
