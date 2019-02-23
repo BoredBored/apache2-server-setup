@@ -9,7 +9,7 @@ mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/rootDomain/public";
 mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub";
 mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/test.angeletakis.net";
 mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/public";
-mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/alexios.angeletakis.net";
+mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/doc.angeletakis.net";
 
 apt-get update -y;
 apt-get install curl php7.0-cli git -y;
@@ -20,7 +20,7 @@ apt-get update -y;
 apt-get install python-certbot-apache -y;
 apt-get install vim -y;
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer;
-goto endOfFireWallInstallationAndSetup # commment out if you don't have a firewall
+goto endOfFireWallInstallationAndSetup # commment out if you have a firewall
 apt-get install iptables -y;
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP;
 /sbin/iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP;
