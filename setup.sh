@@ -1,16 +1,4 @@
 #!/bin/bash
-#apt-get install software-properties-common python-software-properties -y;add-apt-repository ppa:git-core/ppa -y; apt-get update; apt-get install git -y;cd ..;git clone https://github.com/BoredBored/stuff.git;cd stuff;chmod +x *; sh setup.sh
-
-mkdir -p "/var/web-root/www/admin";
-mkdir -p "/var/web-root/www/admin/domains";
-mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net";
-mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/rootDomain";
-mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/rootDomain/public";
-mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub";
-mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/test.angeletakis.net";
-mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/test.angeletakis.net/public";
-mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/doc.angeletakis.net";
-
 apt-get update -y;
 add-apt-repository ppa:certbot/certbot -y;
 apt-get update -y;
