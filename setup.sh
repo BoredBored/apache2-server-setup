@@ -12,15 +12,12 @@ mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/test.angeletakis.
 mkdir  -p "/var/web-root/www/admin/domains/angeletakis.net/sub/doc.angeletakis.net";
 
 apt-get update -y;
-apt-get install curl php7.0-cli git -y;
-apt-get update -y;
-apt-get install software-properties-common -y;
 add-apt-repository ppa:certbot/certbot -y;
 apt-get update -y;
-apt-get install python-certbot-apache -y;
-apt-get install vim -y;
+apt-get install curl php7.0-cli git python-certbot-apache software-properties-common -y;
+apt-get update -y;
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer;
-goto endOfFireWallInstallationAndSetup # commment out if you have a firewall
+#goto endOfFireWallInstallationAndSetup # uncommment if you have a firewall
 apt-get install iptables -y;
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP;
 /sbin/iptables -t mangle -A PREROUTING -p tcp ! --syn -m conntrack --ctstate NEW -j DROP;
